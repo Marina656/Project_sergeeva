@@ -9,9 +9,13 @@ try:
     if A >= B:
         print("Ошибка: A должно быть меньше B")
     else:
-        for num in range(A, B + 1):
-            for i in range(num):
+        num = A
+        while num <= B:
+            i = 0
+            while i < num:
                 print(num, end=" ")
+                i += 1
             print()
+            num += 1
 except ValueError:
     print('ошибка ввода')
