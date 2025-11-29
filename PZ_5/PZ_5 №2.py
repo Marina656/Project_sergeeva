@@ -3,29 +3,33 @@
 значение В - в А(А,В,С - вещественные параметры, являющиеся одновременно входными.) С помощью
 этой функции выполнить левый циклический сдвиг для двух данных наборов из трёх чисел: (А1, В1, С1) и (А2, В2, С2).
 """
-def ShiftLeft3(A, B, C):
-    temp = A
-    A = B
-    B = C
-    C = temp
+try:
+    def ShiftLeft3(A, B, C):
+        temp = A
+        A = B
+        B = C
+        C = temp
 
-    return A, B, C
+        return A, B, C
 
-print("Первый набор чисел:")
-A1 = float(input("A1 = "))
-B1 = float(input("B1 = "))
-C1 = float(input("C1 = "))
 
-print(f"До сдвига: A1={A1}, B1={B1}, C1={C1}")
-A1, B1, C1 = ShiftLeft3(A1, B1, C1)
-print(f"После сдвига: A1={A1}, B1={B1}, C1={C1}")
+    print("Первый набор чисел:")
+    A1 = float(input("A1 = "))
+    B1 = float(input("B1 = "))
+    C1 = float(input("C1 = "))
 
-print()
-print("Второй набор чисел:")
-A2 = float(input("A2 = "))
-B2 = float(input("B2 = "))
-C2 = float(input("C2 = "))
+    print(f"До сдвига: A1={A1}, B1={B1}, C1={C1}")
+    A1, B1, C1 = ShiftLeft3(A1, B1, C1)
+    print(f"После сдвига: A1={A1}, B1={B1}, C1={C1}")
 
-print(f"До сдвига: A2={A2}, B2={B2}, C2={C2}")
-A2, B2, C2 = ShiftLeft3(A2, B2, C2)
-print(f"После сдвига: A2={A2}, B2={B2}, C2={C2}")
+    print()
+    print("Второй набор чисел:")
+    A2 = float(input("A2 = "))
+    B2 = float(input("B2 = "))
+    C2 = float(input("C2 = "))
+    
+    print(f"До сдвига: A2={A2}, B2={B2}, C2={C2}")
+    A2, B2, C2 = ShiftLeft3(A2, B2, C2)
+    print(f"После сдвига: A2={A2}, B2={B2}, C2={C2}")
+except ValueError:
+    print("Ошибка! Введите корректные числа.")
