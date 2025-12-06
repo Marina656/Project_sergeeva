@@ -2,17 +2,30 @@
 Дан список размером N, все элементы которого, кроме последнего, упорядочены по возрастанию,сделать список упорядоченым
 переместив последний элемент на элемент на новую позицию.
 """
+"""
+Дан список размером N, все элементы которого, кроме последнего, упорядочены по возрастанию,сделать список упорядоченым
+переместив последний элемент на элемент на новую позицию.
+"""
 try:
-        n = input("Введите числа через пробел: ")
-        num = n.split()
-        a = []
-        for num in num:
-            a.append(int(num))
-        print(f"Исходный список: {a}")
-        first_element = a[0]
-        a.pop(0)
-        a.append(first_element)
-        print(f"Новый список: {a}")
+    n = input("Введите числа через пробел: ")
+    num = n.split()
+    a = []
+    for i in num:
+        a.append(int(i))
+    print(f"Исходный список: {a}")
+
+    for i in range(len(a)):
+        min_index = i
+        for j in range(i + 1, len(a)):
+            if a[j] < a[min_index]:
+                min_index = j
+        a[i], a[min_index] = a[min_index], a[i]
+    print(f"Отсортированный список: {a}")
+
+    first_element = a[0]
+    a.pop(0)
+    a.append(first_element)
+    print(f"Новый список: {a}")
 
 except ValueError:
     print('Ошибка: введите числа через пробел')
