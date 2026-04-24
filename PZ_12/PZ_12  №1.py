@@ -6,12 +6,12 @@ import random
 Matr2 = [[random.randint(1, 100) for matematika in range(3)] for matematika in range(3)]
 
 print("Исходная матрица Matr2:")
-for row in Matr2:
-    print(row)
+for i in Matr2:
+    print(i)
 
-last_two_cols = [row[-2:] for row in Matr2]
+last_two_cols = [i[-2:] for i in Matr2]
 
-flat_list = [num for row in last_two_cols for num in row]
+flat_list = [num for i in last_two_cols for num in i]
 chet = sum(flat_list)/ len(flat_list)
 
 print("\nПоследние два столбца:")
