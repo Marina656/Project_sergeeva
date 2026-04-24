@@ -3,7 +3,8 @@
 матрицы Mat2 произвольного номера
 '''
 import random
-Matr2 = [[random.randint(1, 100) for matematika in range(4)] for matematika in range(4)]
+n = int(input("Введите размер матрицы:"))
+Matr2 = [[random.randint(1, 100) for matematika in range(n)] for matematika in range(n)]
 
 print("Исходная матрица Matr2:")
 print(*Matr2, sep="\n")
