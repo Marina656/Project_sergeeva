@@ -2,17 +2,13 @@
 Перенести в новую матрицу Matr1, элементы которые не находятся в первых и последних строках и столбцах
 матрицы Mat2 произвольного номера
 '''
-import numpy as np
+import random
+Matr2 = [[random.randint(1, 100) for matematika in range(4)] for matematika in range(4)]
 
-Matr2 = np.array([
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9,10,11,12],
-    [13,14,15,16]
-])
 print("Исходная матрица Matr2:")
-print(Matr2)
-Matr1 = Matr2[1:-1, 1:-1]
+print(*Matr2, sep='\n')
 
-print("\nНовая матрица Matr1 (без границ):")
-print(Matr1)
+Matr1 = [row[1:-1] for row in Matr2[1:-1]]
+
+print("\nНовая матрица Matr1:")
+print(*Matr1, sep='\n')
