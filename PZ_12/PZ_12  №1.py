@@ -1,20 +1,19 @@
 '''
 В матрице найти среднее арифметическое элементов последних двух столбцов
 '''
-import numpy as np
+import random
 
-Matr2 = np.array([
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9,10,11,12],
-    [13,14,15,16] ])
+Matr2 = [[random.randint(1, 100) for matematika in range(3)] for matematika in range(3)]
+
 print("Исходная матрица Matr2:")
-print(Matr2)
+for row in Matr2:
+    print(row)
 
-last_two_cols = Matr2[:, -2:]
+last_two_cols = [row[-2:] for row in Matr2]
 
-average = last_two_cols.mean()
+flat_list = [num for row in last_two_cols for num in row]
+chet = sum(flat_list)/ len(flat_list)
 
 print("\nПоследние два столбца:")
-print(last_two_cols)
-print("Среднее арифметическое:", average)
+print(*last_two_cols, sep='\n')
+print("Среднее арифметическое:", chet)
