@@ -6,9 +6,11 @@ import random
 Matr2 = [[random.randint(1, 100) for matematika in range(4)] for matematika in range(4)]
 
 print("Исходная матрица Matr2:")
-print(*Matr2, sep='\n')
+for i in Matr2:
+    print(i)
 
-Matr1 = [row[1:-1] for row in Matr2[1:-1]]
+Matr1 = [i[1:-1] for i in Matr2[1:-1]]
 
 print("\nНовая матрица Matr1:")
-print(*Matr1, sep='\n')
+for i in Matr1:
+    print(i)
