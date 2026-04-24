@@ -2,25 +2,18 @@
 1. В последовательности на n целых элементов найти среднее арифметическое элементов первой трети.
 '''
 import random
-
-def first_third_generator(seq):
-    n = len(seq) // 3
-    for i in range(n):
-        yield seq[i]
+from functools import reduce
 
 def average_first_third(seq):
-    total = 0
-    count = 0
+    fts = len(seq) // 3
+    ft = seq[:fts]
 
-    for num in first_third_generator(seq):
-        total += num
-        count += 1
+    total = reduce(lambda x, y: x + y, ft, 0)
 
-    return total / count if count > 0 else 0
-
+    return total / len(ft) if ft else 0
 n = int(input("Введите количество элементов: "))
 
-nums = [random.randint(1, 100) for _ in range(n)]
+nums = [random.randint(1, 100) for matematika in range(n)]
 print("Список:", nums)
 
-print("Среднее первой трети:", average_first_third(nums))
+print(f"Среднее первой трети:", average_first_third(nums))
