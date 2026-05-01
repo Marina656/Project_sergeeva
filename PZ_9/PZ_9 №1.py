@@ -11,3 +11,4 @@ vse_kulturi = {"картофель", "лук", "морковь", "горох", "
 print('Какие культуры имеются на каждом участке:', uchastok3 & uchastok2 & uchastok1)
 print('Какие культуры имеются хотя бы на одном участке:', uchastok1 | uchastok2 | uchastok3)
 print('Какие культуры не имеются ни на одном участке:', vse_kulturi - uchastok1 - uchastok2 - uchastok3)
+
