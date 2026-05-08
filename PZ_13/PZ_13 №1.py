@@ -9,4 +9,6 @@ with open('pazzl.html', 'r', encoding='utf-8') as f:
 
 images = re.findall(r'<[Ii][Mm][Gg][^>]*>', text)
 
-print(f"Количество изображений: {len(images)}")
+print(f"Количество изображений: {len(images)}\n")
+print("Коды изображений:")
+print("\n".join(images))
