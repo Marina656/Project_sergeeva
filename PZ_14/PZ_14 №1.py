@@ -37,7 +37,7 @@ label_email = Label(form_frame, text="Email", font=FONT_LABEL, fg=COLOR_BLUE_TEX
 label_email.grid(row=0, column=0, padx=10, pady=5, sticky="e")
 
 entry_email = Entry(form_frame, width=30, font=FONT_ENTRY, fg="grey", bd=1, relief="solid")
-entry_email.insert(0, "email")
+entry_email.insert(0, "@gmail.com")
 entry_email.grid(row=0, column=1, padx=10, pady=5)
 entry_email.bind("<FocusIn>", lambda e: on_focus_in(entry_email, "email"))
 entry_email.bind("<FocusOut>", lambda e: on_focus_out(entry_email, "email"))
