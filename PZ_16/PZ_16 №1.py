@@ -30,7 +30,7 @@ class Student:
 student1 = Student("Иван", "Иванов", [5, 5, 4, 5, 5])
 student2 = Student("Мария", "Петрова", [3, 4, 3, 4, 3])
 student3 = Student("Алексей", "Сидоров", [5, 5, 5, 5, 5])
-student4 = Student("Анна", "Смирнова", [])  # Без оценок
+student4 = Student("Анна", "Смирнова", [])
 
 print("ИНФОРМАЦИЯ О СТУДЕНТАХ:")
 
